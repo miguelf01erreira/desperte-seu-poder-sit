@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESPERTE SEU PODER | Ebook de Transformação Pessoal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #FFD700;
+            --dark-gold: #D4AF37;
+            --black: #121212;
+            --white: #FFFFFF;
+            --gray: #F5F5F5;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--black);
+            color: var(--white);
+            line-height: 1.8;
+        }
+        
+        .gold-text {
+            color: var(--gold);
+        }
+        
+        .gold-bg {
+            background: linear-gradient(135deg, var(--dark-gold), var(--gold));
+            color: var(--black);
+        }
+        
+        .btn-gold {
+            display: inline-block;
+            padding: 16px 40px;
+            background: linear-gradient(to right, var(--dark-gold), var(--gold));
+            color: var(--black);
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+        
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* HEADER HERO */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        /* BENEFÍCIOS */
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin: 60px 0 40px;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--dark-gold);
+            border-radius: 10px;
+            padding: 30px;
+            transition: transform 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            background: rgba(212, 175, 55, 0.1);
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--gold);
+        }
+        
+        /* DEPOIMENTOS */
+        .testimonials {
+            background: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            padding: 80px 0;
+            position: relative;
+            text-align: center;
+        }
+        
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        
+        .testimonials .section-title {
+            position: relative;
+            z-index: 2;
+            color: var(--gold);
+        }
+        
+        .testimonial-card {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.7);
+            border-left: 4px solid var(--gold);
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* OFERTA */
+        .offer {
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .price {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin: 20px 0;
+            color: var(--gold);
+        }
+        
+        .guarantee {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        
+        .guarantee img {
+            margin-right: 15px;
+            width: 50px;
+        }
+        
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            background: #000;
+            border-top: 1px solid var(--dark-gold);
+        }
+        
+        footer p {
+            margin: 10px 0;
+        }
+        
+        /* RESPONSIVO */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .price {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content container">
+            <h1 class="gold-text">DESPERTE SEU <span class="gold-text">PODER</span></h1>
+            <p>O <strong>método completo</strong> que vai te guiar para uma vida de <strong>realizações, confiança e propósito</strong>. Transforme sua mente e alcance tudo que sempre desejou!</p>
+            <a href="https://pay.kiwify.com.br/ps62PRF" class="btn-gold">COMPRAR AGORA</a>
+        </div>
+    </section>
+    
+    <!-- BENEFÍCIOS -->
+    <section class="container">
+        <h2 class="section-title gold-text">O QUE VOCÊ VAI <span class="gold-text">DESCOBRIR</span></h2>
+        
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h3>Autoconhecimento Profundo</h3>
+                <p>Desvende os padrões mentais que te limitam e aprenda a reprogramar sua mente para o sucesso.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <h3>Mentalidade Vencedora</h3>
+                <p>Desenvolva a mesma mentalidade das pessoas bem-sucedidas e atraia oportunidades.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <h3>Foco e Produtividade</h3>
+                <p>Técnicas comprovadas para eliminar distrações e realizar mais em menos tempo.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <h3>Controle Emocional</h3>
+                <p>Aprenda a dominar suas emoções e mantenha o equilíbrio em qualquer situação.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <h3>Relacionamentos Poderosos</h3>
+                <p>Construa conexões profundas e significativas em todas as áreas da sua vida.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <h3>Propósito e Realização</h3>
+                <p>Descubra seu verdadeiro propósito e viva uma vida alinhada com seu potencial máximo.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- DEPOIMENTOS -->
+    <section class="testimonials">
+        <h2 class="section-title">HISTÓRIAS DE <span class="gold-text">TRANSFORMAÇÃO</span></h2>
+        
+        <div class="testimonial-card">
+            <p>"Depois de anos lutando contra minha ansiedade e falta de direção, 'Desperte Seu Poder' me mostrou o caminho. Em 3 meses, mudei minha carreira, perdi 12kg e reconquistei minha autoestima. Vale cada centavo!"</p>
+            <p><strong>- Rafael S., 32 anos</strong></p>
+        </div>
+        
+        <div class="testimonial-card">
+            <p>"Já li dezenas de livros de desenvolvimento pessoal, mas nenhum me impactou como este. As técnicas são práticas e os resultados apareceram rapidamente. Minha produtividade triplicou e finalmente estou realizando meus sonhos."</p>
+            <p><strong>- Juliana M., Empreendedora</strong></p>
+        </div>
+    </section>
+    
+    <!-- OFERTA -->
+    <section class="offer gold-bg">
+        <div class="container">
+            <h2 class="section-title">OFERTA <span>EXCLUSIVA</span></h2>
+            
+            <div class="price">R$ 67,99</div>
+            
+            <p><strong>Ebook completo + Bônus especiais</strong></p>
+            <p>Acesso imediato | Download vitalício</p>
+            
+            <a href="https://pay.kiwify.com.br/ps62PRF" class="btn-gold" style="background: var(--black); color: var(--gold);">QUERO MEU EBOOK AGORA!</a>
+            
+            <div class="guarantee">
+                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828640.png" alt="Garantia">
+                <p><strong>Garantia de 7 dias</strong> - Se não amar, devolvemos seu dinheiro!</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FINAL CALL TO ACTION -->
+    <section class="container" style="text-align: center; padding: 80px 0;">
+        <h2 class="section-title gold-text">SUA JORNADA COMEÇA <span class="gold-text">AGORA</span></h2>
+        <p style="max-width: 800px; margin: 0 auto 40px;">Você tem duas escolhas: continuar como está, ou dar o primeiro passo para se tornar a melhor versão de si mesmo. O conhecimento que vai transformar sua vida está a um clique de distância.</p>
+        
+        <a href="https://pay.kiwify.com.br/ps62PRF" class="btn-gold">SIM, QUERO DESPERTAR MEU PODER!</a>
+    </section>
+    
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>© 2023 <span class="gold-text">Desperte Seu Poder</span> - Todos os direitos reservados</p>
+            <p><a href="#" style="color: var(--gold);">Termos de Uso</a> | <a href="#" style="color: var(--gold);">Política de Privacidade</a></p>
+        </div>
+    </footer>
+</body>
+</html>
